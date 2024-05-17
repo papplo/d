@@ -1,0 +1,20 @@
+#!/bin/bash
+
+## create journal directory ###
+backup_dir=$(date +'%b%d%Y')
+echo "Journal directory for today: /${backup_dir}"
+mkdir ${backup_dir}
+
+## create journal entry ###
+touch ${backup_dir}/index.html
+
+## log entry in readme ###
+title="## [$(date +'%D')](/${backup_dir}/)"
+commit_name="   - Journal entry for ${backup_dir}"
+
+echo -e "\n\n${title}\n${commit_name}" >> ./README.md
+
+## commit
+git add ${backup_dir} README.md
+git commit -m "Journal entry for ${backup_dir}"
+git log -1 >> ./README.md
