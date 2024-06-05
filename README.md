@@ -15,3 +15,7 @@
 
 ## [05/17/24](/May172024/)
    - Journal entry for May172024
+
+
+## [06/05/24](/Jun052024/)
+   - Journal entry for Jun052024
