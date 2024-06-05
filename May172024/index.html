@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<script src="lib/d3.js"></script>
+<script src="lib/plot.js"></script>
+
+<script type="module">
+  let data = [
+    10, 12, 16, 20, 28, 102, 114, 90, 76, 77, 12, 4, 3, 6, 9, 0, 0, 0,
+  ];
+  const plot = Plot.line(
+    { length: data.length },
+    Plot.binX({ y: "count" }, { x: Math.random })
+  ).plot();
+
+  const div = document.querySelector("#myplot");
+  div.append(plot);
+
+  function onMouseMove(event) {
+    const point = d3.pointer(event);
+    data = data.concat(point);
+    plot.binX({ y: "count"}, { x: data.x})
+  }
+
+  div.addEventListener('mousemove', onMouseMove)
+
+</script>
+
+<div id="myplot"></div>
