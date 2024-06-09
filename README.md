@@ -26,3 +26,6 @@ Date:   Wed Jun 5 20:23:28 2024 +0200
 ## [06/05/24](/Jun052024/)
    - Journal entry for Jun052024
    - Kravmatris, document it.
+
+## [06/10/24](/Jun102024/)
+   - Journal entry for Jun102024
