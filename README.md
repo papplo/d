@@ -19,3 +19,10 @@
 
 ## [06/05/24](/Jun052024/)
    - Journal entry for Jun052024
+commit c36103dbd94b873adde31701041d7035086ff94d
+Author: Pablo Anttila <pablo@queenslab.se>
+Date:   Wed Jun 5 20:23:28 2024 +0200
+
+## [06/05/24](/Jun052024/)
+   - Journal entry for Jun052024
+   - Kravmatris, document it.
