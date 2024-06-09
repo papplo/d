@@ -1,0 +1,16 @@
+#!/bin/bash
+
+## observe current file by selecting pointer from positinal parameters
+if [ -f "$1" ]; then
+    echo "$1" exists
+    export current_dir=${1%/*}
+    export current_file=${1##*/}
+    export html_file=${current_file%.*}.html
+fi
+
+## use pandoc to transform what is believed to be a correct md-file.
+if [ -z $current_file ]; then
+  echo No file found at "$1"; else
+    echo "lets process $current_file" with pandoc
+    pandoc -s $current_dir/$current_file --metadata title="$current_dir" -o $current_dir/$html_file
+fi
