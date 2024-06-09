@@ -6,7 +6,7 @@ echo "Journal directory for today: /${backup_dir}"
 mkdir ${backup_dir}
 
 ## create journal entry ###
-touch ${backup_dir}/index.html
+touch ${backup_dir}/index.md
 
 ## log entry in readme ###
 title="## [$(date +'%D')](/${backup_dir}/)"
